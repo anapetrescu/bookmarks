@@ -50,7 +50,6 @@ export const bookmarksReducer = createReducer(
   on(setBookmarkToEdit, (state, { bookmark }) => ({
     ...state,
     bookmarkToEdit: bookmark,
-    loading: true,
   })),
   on(editBookmarkSuccess, (state, { bookmark }) => ({
     ...state,
