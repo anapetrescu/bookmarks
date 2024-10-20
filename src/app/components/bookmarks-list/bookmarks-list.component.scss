@@ -1,0 +1,36 @@
+@import "variables.scss";
+.bookmark {
+  display: flex;
+  justify-content: center;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-xl;
+    width: $width-xxl;
+    margin-top: $margin-lg;
+
+    &-cards {
+      margin-top: $margin-lg;
+      .title {
+        font-size: $font-size-lg;
+        padding: $padding-md 0;
+      }
+    }
+  }
+
+  .no-bookmarks {
+    display: flex;
+    padding-top: $padding-xxl;
+    flex-direction: column;
+    justify-content: center;
+    font-size: $font-size-lg;
+    align-items: center;
+
+    a {
+      color: $dark-color;
+      font-size: $font-size-md;
+      margin-top: $padding-sm;
+      outline: none;
+    }
+  }
+}

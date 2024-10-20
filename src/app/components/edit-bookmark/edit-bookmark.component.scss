@@ -1,0 +1,15 @@
+@import "variables.scss";
+
+.edit {
+  padding-top: $padding-top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &-title {
+    width: $width-lg;
+    align-self: center;
+    font-size: $font-size-xl;
+    margin-bottom: $margin-md;
+    color: $dark-color;
+  }
+}

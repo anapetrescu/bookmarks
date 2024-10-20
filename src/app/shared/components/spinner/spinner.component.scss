@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: rgb(62, 59, 59);
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}

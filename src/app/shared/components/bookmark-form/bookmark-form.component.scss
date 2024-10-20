@@ -1,0 +1,44 @@
+@import "variables.scss";
+.bookmark-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  form {
+    width: $width-lg;
+    display: flex;
+    flex-direction: column;
+    input {
+      border: none;
+      outline: none;
+      width: 90%;
+      background-color: transparent;
+      color: $text-color;
+      border-bottom: 1px solid $dark-color;
+      margin-top: $margin-xl;
+      font-size: $font-size-sm;
+    }
+
+    .invalid {
+      color: $warn;
+      font-size: $font-size-xs;
+    }
+
+    button {
+      color: $dark-color;
+      font-size: $font-size-sm;
+      margin-top: $padding-xl;
+      border: 1px solid $border-color;
+      border-radius: $border-radius-md;
+      outline: none;
+      align-self: end;
+      min-width: $width-sm;
+      padding: $padding-sm;
+    }
+
+    button:hover:enabled {
+      border-color: $dark-color;
+      transform: scale(1.05);
+    }
+  }
+}

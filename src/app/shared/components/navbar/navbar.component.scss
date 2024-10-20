@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+.navbar {
+  display: flex;
+  height: $height-xl;
+  background-color: $primary-color;
+  justify-content: space-between;
+  border-bottom: 1px solid $secondery-color;
+  position: fixed;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-self: center;
+  padding: 0 $padding-md;
+  font-size: $font-size-xl;
+  color: $text-color;
+  width: 27%;
+}
+
+.search {
+  height: $height-md;
+  width: $width-xl;
+  align-self: center;
+  display: flex;
+  border-bottom: 1px solid $border-color;
+  align-items: stretch;
+  justify-content: space-between;
+  border-radius: $border-radius-lg;
+  input {
+    border: none;
+    outline: none;
+    width: 90%;
+    background-color: transparent;
+    color: $text-color;
+  }
+  mat-icon {
+    align-self: center;
+    color: $dark-color;
+  }
+}
+
+.add {
+  align-self: center;
+  color: $dark-color;
+  padding: 0 $padding-md;
+  button {
+    background-color: transparent;
+    border: none;
+  }
+  mat-icon:hover {
+    color: $hover-dark-color;
+  }
+}
+
+.right-container {
+  display: flex;
+  justify-content: end;
+  width: 70%;
+}

@@ -1,0 +1,34 @@
+<div class="navbar">
+  <div
+    class="title"
+    matTooltip="Bookmark"
+    [tabIndex]="0"
+    (click)="goToHomePage()"
+    (keydown.enter)="goToHomePage()"
+  >
+    <mat-icon>bookmark</mat-icon>
+    <div>Bookmark</div>
+  </div>
+  <div class="right-container">
+    <div class="search" matTooltip="Search a bookmark">
+      <mat-icon>search</mat-icon>
+      <input
+        matInput
+        type="search"
+        [(ngModel)]="searchText"
+        [tabIndex]="0"
+        (input)="onSearchTextChanged()"
+        (keydown.enter)="onSearchTextChanged()"
+      />
+    </div>
+    <div class="add" matTooltip="Add a bookmark">
+      <button
+        (click)="goToAddBookmark()"
+        [tabIndex]="0"
+        (keydown.enter)="goToAddBookmark()"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div
+  class="bookmark"
+  *ngIf="
+    (bookmarksLoading$ | async) === false &&
+      (bookmarksList$ | async) as bookmarks;
+    else spinner
+  "
+>
+  <div
+    class="bookmark-container"
+    *ngIf="isBookmarkListValid(bookmarks); else noBookmarks"
+  >
+    <div class="bookmark-container-cards">
+      <div class="title" *ngIf="bookmarks.today.length">Today</div>
+      <app-bookmark-card
+        *ngFor="let bookmark of bookmarks.today"
+        [bookmark]="bookmark"
+      >
+      </app-bookmark-card>
+    </div>
+    <div class="bookmark-container-cards" *ngIf="bookmarks.yesterday.length">
+      <div class="title">Yestarday</div>
+      <app-bookmark-card
+        *ngFor="let bookmark of bookmarks.yesterday"
+        [bookmark]="bookmark"
+      >
+      </app-bookmark-card>
+    </div>
+    <div class="bookmark-container-cards" *ngIf="bookmarks.older.length">
+      <div class="title">Older</div>
+      <app-bookmark-card
+        *ngFor="let bookmark of bookmarks.older"
+        [bookmark]="bookmark"
+      >
+      </app-bookmark-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #spinner>
+  <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #noBookmarks>
+  <div class="no-bookmarks">
+    <div>No bookmarks have been added yet.</div>
+    <a routerLink="add" [matTooltip]="'Go to add page'" [tabIndex]="0"
+      >Add a bookmark</a
+    >
+  </div>
+</ng-template>

@@ -1,0 +1,22 @@
+<div class="card" *ngIf="areDetailsValid">
+  <div class="card-info">
+    <div class="card-image">
+      <img src="assets/www-img.jpg" alt="" />
+    </div>
+    <div class="card-details">
+      <div class="card-details-title">{{ bookmark?.name }}</div>
+      <a
+        tabindex="0"
+        class="card-details-url"
+        [href]="bookmark?.url"
+        [matTooltip]="'Navigate to ' + bookmark?.url"
+        >{{ bookmark?.url }}</a
+      >
+    </div>
+  </div>
+  <div class="card-edit" matTooltip="Edit bookmark">
+    <button (click)="edit()" [tabIndex]="0" (keydown.enter)="edit()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+</div>

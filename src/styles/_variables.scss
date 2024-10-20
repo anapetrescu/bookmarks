@@ -1,0 +1,82 @@
+// _variables.scss
+
+// Colors
+$primary-color: #fefefe; // Magenta-violet primary color
+$secondery-color: #f5f5f5; // Magenta-violet accent color
+$text-color: black;
+$border-color: #d2cece;
+$dark-color: rgb(62, 59, 59);
+$warn: red;
+$hover-dark-color: rgba(0, 0, 0, 0.562);
+
+// Padding variables
+$padding-xs: 4px;
+$padding-sm: 8px;
+$padding-md: 16px;
+$padding-lg: 24px;
+$padding-xl: 32px;
+$padding-xxl: 300px;
+$padding-top: 150px;
+
+$top: 60px;
+
+// Margin variables
+$margin-xs: 4px;
+$margin-sm: 8px;
+$margin-md: 16px;
+$margin-lg: 24px;
+$margin-xl: 32px;
+
+// Gap
+$gap: 15px;
+
+// Font size variables
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+
+// Font weight variables
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Border radius variables
+$border-radius-sm: 2px;
+$border-radius-md: 4px;
+$border-radius-lg: 8px;
+$border-radius-circle: 100%;
+
+// Line height variables
+$line-height-xs: 1.2;
+$line-height-sm: 1.4;
+$line-height-md: 1.6;
+$line-height-lg: 1.8;
+$line-height-xl: 2;
+
+// Width and height variables
+$width-xs: 50px;
+$width-sm: 100px;
+$width-md: 200px;
+$width-lg: 300px;
+$width-xl: 400px;
+$width-xxl: 600px;
+
+$height-xs: 24px;
+$height-sm: 32px;
+$height-md: 40px;
+$height-lg: 48px;
+$height-xl: 64px;
+
+// Container size variables
+$container-width-sm: 640px;
+$container-width-md: 768px;
+$container-width-lg: 1024px;
+$container-width-xl: 1280px;
+
+// Z-index variables
+$z-index-low: 10;
+$z-index-medium: 100;
+$z-index-high: 1000;
+$z-index-top: 9999;

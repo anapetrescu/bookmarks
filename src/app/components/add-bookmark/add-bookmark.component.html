@@ -1,0 +1,7 @@
+<div class="add">
+  <div class="add-title">Create a new bookmark</div>
+  <app-bookmark-form
+    [buttonText]="'Create bookmark'"
+    (formSubmit)="addBookmark($event)"
+  ></app-bookmark-form>
+</div>

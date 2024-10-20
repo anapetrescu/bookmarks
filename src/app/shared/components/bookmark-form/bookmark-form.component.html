@@ -1,0 +1,33 @@
+<div class="bookmark-form">
+  <form
+    [formGroup]="bookmarkForm"
+    (ngSubmit)="formSubmit.emit(bookmarkForm.value)"
+  >
+    <input id="name" formControlName="name" placeholder="Enter name" />
+
+    <input
+      id="url"
+      formControlName="url"
+      appUrlValidator
+      placeholder="Enter URL"
+    />
+
+    <div
+      *ngIf="
+        bookmarkForm.get('url')?.invalid && bookmarkForm.get('url')?.touched
+      "
+      class="invalid"
+    >
+      <small *ngIf="bookmarkForm.get('url')?.errors">*Invalid URL format</small>
+    </div>
+
+    <button
+      type="formSubmit"
+      [disabled]="!bookmarkForm.valid"
+      [tabIndex]="0"
+      (keydown.enter)="formSubmit.emit(bookmarkForm.value)"
+    >
+      {{ buttonText }}
+    </button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<div class="edit" *ngIf="bookmarkToEdit as bookmark; else spinner">
+  <div class="edit-title">Update bookmark</div>
+  <app-bookmark-form
+    [bookmark]="bookmark"
+    [buttonText]="'Update bookmark'"
+    (formSubmit)="editBookmark($event)"
+  ></app-bookmark-form>
+</div>
+
+<ng-template #spinner>
+  <app-spinner></app-spinner>
+</ng-template>
